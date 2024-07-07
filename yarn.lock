@@ -8754,11 +8754,6 @@ statuses@2.0.1:
   resolved "https://registry.npmjs.org/statuses/-/statuses-2.0.1.tgz"
   integrity sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==
 
-strapi-plugin-random-sort@^0.0.3:
-  version "0.0.3"
-  resolved "https://registry.npmjs.org/strapi-plugin-random-sort/-/strapi-plugin-random-sort-0.0.3.tgz"
-  integrity sha512-l++/dSvMzJtZVPnT+FJ6cV9W0C/UlfkoHDwb2xYCl1iSHaGndwrod7JrwQT1TINmR015d+TPAKll0JOry9Xy/Q==
-
 stream-chain@^2.2.5, stream-chain@2.2.5:
   version "2.2.5"
   resolved "https://registry.npmjs.org/stream-chain/-/stream-chain-2.2.5.tgz"
