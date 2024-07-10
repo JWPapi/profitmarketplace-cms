@@ -55,7 +55,7 @@
     "featured": {
       "type": "boolean"
     },
-    "descriptions": {
+    "description": {
       "type": "text"
     }
   }
