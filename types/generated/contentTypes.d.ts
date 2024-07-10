@@ -779,6 +779,7 @@ export interface ApiIdentityIdentity extends Schema.SingleType {
     youtube: Attribute.String
     url: Attribute.String
     domain: Attribute.String
+    logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>
     createdAt: Attribute.DateTime
     updatedAt: Attribute.DateTime
     publishedAt: Attribute.DateTime
