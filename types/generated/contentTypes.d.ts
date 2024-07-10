@@ -676,8 +676,8 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     author: Attribute.Relation<'api::article.article', 'oneToOne', 'api::author.author'>
     tags: Attribute.Relation<'api::article.article', 'manyToMany', 'api::tag.tag'>
     category: Attribute.Relation<'api::article.article', 'oneToOne', 'api::category.category'>
-    featured: Attribute.Boolean
     description: Attribute.Text
+    bulletPoints: Attribute.JSON
     createdAt: Attribute.DateTime
     updatedAt: Attribute.DateTime
     publishedAt: Attribute.DateTime

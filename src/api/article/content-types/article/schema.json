@@ -52,11 +52,11 @@
       "relation": "oneToOne",
       "target": "api::category.category"
     },
-    "featured": {
-      "type": "boolean"
-    },
     "description": {
       "type": "text"
+    },
+    "bulletPoints": {
+      "type": "json"
     }
   }
 }
