@@ -10,8 +10,6 @@ const { createCoreController } = require('@strapi/strapi').factories
 module.exports = createCoreController('api::article.article', ({ strapi }) => ({
   // Query by slug
   async findOne(ctx) {
-    // thanks to the custom route we have now a slug variable
-    // instead of the default id
     const { slug } = ctx.params
     const entity = await strapi.db.query('api::article.article').findOne({
       where: { slug },
@@ -24,6 +22,9 @@ module.exports = createCoreController('api::article.article', ({ strapi }) => ({
         },
         category: {
           fields: ['name'],
+        },
+        tags: {
+          fields: ['name', 'slug'],
         },
       },
     })
