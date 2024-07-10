@@ -54,6 +54,9 @@
     },
     "featured": {
       "type": "boolean"
+    },
+    "descriptions": {
+      "type": "text"
     }
   }
 }
