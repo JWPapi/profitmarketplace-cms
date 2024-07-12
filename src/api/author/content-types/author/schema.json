@@ -18,6 +18,9 @@
     "slug": {
       "type": "uid",
       "targetField": "name"
+    },
+    "bio": {
+      "type": "text"
     }
   }
 }
