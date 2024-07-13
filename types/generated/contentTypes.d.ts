@@ -783,6 +783,7 @@ export interface ApiIdentityIdentity extends Schema.SingleType {
     domain: Attribute.String
     logo: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>
     business: Attribute.Boolean
+    layout: Attribute.Integer
     createdAt: Attribute.DateTime
     updatedAt: Attribute.DateTime
     publishedAt: Attribute.DateTime

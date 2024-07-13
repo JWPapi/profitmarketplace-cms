@@ -60,6 +60,9 @@
     },
     "business": {
       "type": "boolean"
+    },
+    "layout": {
+      "type": "integer"
     }
   }
 }
