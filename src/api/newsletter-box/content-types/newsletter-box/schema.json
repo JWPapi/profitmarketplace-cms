@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "newsletter_boxes",
+  "info": {
+    "singularName": "newsletter-box",
+    "pluralName": "newsletter-boxes",
+    "displayName": "Newsletter Box"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "heading": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "text"
+    }
+  }
+}

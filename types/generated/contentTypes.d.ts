@@ -795,6 +795,60 @@ export interface ApiIdentityIdentity extends Schema.SingleType {
   }
 }
 
+export interface ApiNewsletterBoxNewsletterBox extends Schema.SingleType {
+  collectionName: 'newsletter_boxes'
+  info: {
+    singularName: 'newsletter-box'
+    pluralName: 'newsletter-boxes'
+    displayName: 'Newsletter Box'
+  }
+  options: {
+    draftAndPublish: true
+  }
+  attributes: {
+    heading: Attribute.String
+    paragraph: Attribute.Text
+    createdAt: Attribute.DateTime
+    updatedAt: Attribute.DateTime
+    publishedAt: Attribute.DateTime
+    createdBy: Attribute.Relation<'api::newsletter-box.newsletter-box', 'oneToOne', 'admin::user'> &
+      Attribute.Private
+    updatedBy: Attribute.Relation<'api::newsletter-box.newsletter-box', 'oneToOne', 'admin::user'> &
+      Attribute.Private
+  }
+}
+
+export interface ApiNewsletterSectionNewsletterSection extends Schema.SingleType {
+  collectionName: 'newsletter_sections'
+  info: {
+    singularName: 'newsletter-section'
+    pluralName: 'newsletter-sections'
+    displayName: 'Newsletter Section'
+  }
+  options: {
+    draftAndPublish: true
+  }
+  attributes: {
+    heading: Attribute.String
+    paragraph: Attribute.Text
+    createdAt: Attribute.DateTime
+    updatedAt: Attribute.DateTime
+    publishedAt: Attribute.DateTime
+    createdBy: Attribute.Relation<
+      'api::newsletter-section.newsletter-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private
+    updatedBy: Attribute.Relation<
+      'api::newsletter-section.newsletter-section',
+      'oneToOne',
+      'admin::user'
+    > &
+      Attribute.Private
+  }
+}
+
 export interface ApiPromptPrompt extends Schema.CollectionType {
   collectionName: 'prompts'
   info: {
@@ -863,6 +917,8 @@ declare module '@strapi/types' {
       'api::category.category': ApiCategoryCategory
       'api::footer-menu.footer-menu': ApiFooterMenuFooterMenu
       'api::identity.identity': ApiIdentityIdentity
+      'api::newsletter-box.newsletter-box': ApiNewsletterBoxNewsletterBox
+      'api::newsletter-section.newsletter-section': ApiNewsletterSectionNewsletterSection
       'api::prompt.prompt': ApiPromptPrompt
       'api::tag.tag': ApiTagTag
     }
