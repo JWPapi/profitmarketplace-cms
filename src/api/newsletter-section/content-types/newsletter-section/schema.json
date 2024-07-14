@@ -1,0 +1,21 @@
+{
+  "kind": "singleType",
+  "collectionName": "newsletter_sections",
+  "info": {
+    "singularName": "newsletter-section",
+    "pluralName": "newsletter-sections",
+    "displayName": "NewsletterSection"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "headline": {
+      "type": "string"
+    },
+    "paragraph": {
+      "type": "string"
+    }
+  }
+}
