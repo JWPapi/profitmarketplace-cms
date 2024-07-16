@@ -678,6 +678,7 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     category: Attribute.Relation<'api::article.article', 'oneToOne', 'api::category.category'>
     description: Attribute.Text
     bulletPoints: Attribute.JSON
+    language: Attribute.String
     createdAt: Attribute.DateTime
     updatedAt: Attribute.DateTime
     publishedAt: Attribute.DateTime
@@ -785,6 +786,7 @@ export interface ApiIdentityIdentity extends Schema.SingleType {
     business: Attribute.Boolean
     layout: Attribute.Integer
     color: Attribute.String
+    language: Attribute.String
     createdAt: Attribute.DateTime
     updatedAt: Attribute.DateTime
     publishedAt: Attribute.DateTime

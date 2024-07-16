@@ -57,6 +57,9 @@
     },
     "bulletPoints": {
       "type": "json"
+    },
+    "language": {
+      "type": "string"
     }
   }
 }
