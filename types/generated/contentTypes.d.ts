@@ -738,29 +738,6 @@ export interface ApiCategoryCategory extends Schema.CollectionType {
   }
 }
 
-export interface ApiFooterMenuFooterMenu extends Schema.CollectionType {
-  collectionName: 'footer_menus'
-  info: {
-    singularName: 'footer-menu'
-    pluralName: 'footer-menus'
-    displayName: 'Footer Menu'
-  }
-  options: {
-    draftAndPublish: true
-  }
-  attributes: {
-    name: Attribute.String
-    link: Attribute.String
-    createdAt: Attribute.DateTime
-    updatedAt: Attribute.DateTime
-    publishedAt: Attribute.DateTime
-    createdBy: Attribute.Relation<'api::footer-menu.footer-menu', 'oneToOne', 'admin::user'> &
-      Attribute.Private
-    updatedBy: Attribute.Relation<'api::footer-menu.footer-menu', 'oneToOne', 'admin::user'> &
-      Attribute.Private
-  }
-}
-
 export interface ApiIdentityIdentity extends Schema.SingleType {
   collectionName: 'identities'
   info: {
@@ -774,7 +751,6 @@ export interface ApiIdentityIdentity extends Schema.SingleType {
   }
   attributes: {
     name: Attribute.String
-    newsletterImage: Attribute.Media<'images' | 'files' | 'videos' | 'audios'>
     twitter: Attribute.String
     facebook: Attribute.String
     instagram: Attribute.String
@@ -917,7 +893,6 @@ declare module '@strapi/types' {
       'api::article.article': ApiArticleArticle
       'api::author.author': ApiAuthorAuthor
       'api::category.category': ApiCategoryCategory
-      'api::footer-menu.footer-menu': ApiFooterMenuFooterMenu
       'api::identity.identity': ApiIdentityIdentity
       'api::newsletter-box.newsletter-box': ApiNewsletterBoxNewsletterBox
       'api::newsletter-section.newsletter-section': ApiNewsletterSectionNewsletterSection

@@ -15,17 +15,6 @@
     "name": {
       "type": "string"
     },
-    "newsletterImage": {
-      "type": "media",
-      "multiple": false,
-      "required": false,
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ]
-    },
     "twitter": {
       "type": "string"
     },
@@ -48,14 +37,15 @@
       "type": "string"
     },
     "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
-      ],
-      "type": "media",
-      "multiple": false
+      ]
     },
     "business": {
       "type": "boolean"
