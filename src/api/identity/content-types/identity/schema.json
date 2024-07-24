@@ -58,6 +58,12 @@
     },
     "language": {
       "type": "string"
+    },
+    "news_grabbing": {
+      "type": "boolean"
+    },
+    "disclaimer": {
+      "type": "string"
     }
   }
 }

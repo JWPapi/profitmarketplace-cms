@@ -678,7 +678,6 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     category: Attribute.Relation<'api::article.article', 'oneToOne', 'api::category.category'>
     description: Attribute.Text
     bulletPoints: Attribute.JSON
-    language: Attribute.String
     createdAt: Attribute.DateTime
     updatedAt: Attribute.DateTime
     publishedAt: Attribute.DateTime
@@ -763,6 +762,8 @@ export interface ApiIdentityIdentity extends Schema.SingleType {
     layout: Attribute.Integer
     color: Attribute.String
     language: Attribute.String
+    news_grabbing: Attribute.Boolean
+    disclaimer: Attribute.String
     createdAt: Attribute.DateTime
     updatedAt: Attribute.DateTime
     publishedAt: Attribute.DateTime
@@ -827,6 +828,29 @@ export interface ApiNewsletterSectionNewsletterSection extends Schema.SingleType
   }
 }
 
+export interface ApiPagePage extends Schema.CollectionType {
+  collectionName: 'pages'
+  info: {
+    singularName: 'page'
+    pluralName: 'pages'
+    displayName: 'Pages'
+    description: ''
+  }
+  options: {
+    draftAndPublish: true
+  }
+  attributes: {
+    slug: Attribute.UID
+    content: Attribute.RichText
+    title: Attribute.String
+    createdAt: Attribute.DateTime
+    updatedAt: Attribute.DateTime
+    publishedAt: Attribute.DateTime
+    createdBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> & Attribute.Private
+    updatedBy: Attribute.Relation<'api::page.page', 'oneToOne', 'admin::user'> & Attribute.Private
+  }
+}
+
 export interface ApiPromptPrompt extends Schema.CollectionType {
   collectionName: 'prompts'
   info: {
@@ -846,6 +870,29 @@ export interface ApiPromptPrompt extends Schema.CollectionType {
     createdBy: Attribute.Relation<'api::prompt.prompt', 'oneToOne', 'admin::user'> &
       Attribute.Private
     updatedBy: Attribute.Relation<'api::prompt.prompt', 'oneToOne', 'admin::user'> &
+      Attribute.Private
+  }
+}
+
+export interface ApiSettingSetting extends Schema.SingleType {
+  collectionName: 'settings'
+  info: {
+    singularName: 'setting'
+    pluralName: 'settings'
+    displayName: 'Settings'
+    description: ''
+  }
+  options: {
+    draftAndPublish: true
+  }
+  attributes: {
+    display_authors: Attribute.Boolean & Attribute.DefaultTo<true>
+    createdAt: Attribute.DateTime
+    updatedAt: Attribute.DateTime
+    publishedAt: Attribute.DateTime
+    createdBy: Attribute.Relation<'api::setting.setting', 'oneToOne', 'admin::user'> &
+      Attribute.Private
+    updatedBy: Attribute.Relation<'api::setting.setting', 'oneToOne', 'admin::user'> &
       Attribute.Private
   }
 }
@@ -896,7 +943,9 @@ declare module '@strapi/types' {
       'api::identity.identity': ApiIdentityIdentity
       'api::newsletter-box.newsletter-box': ApiNewsletterBoxNewsletterBox
       'api::newsletter-section.newsletter-section': ApiNewsletterSectionNewsletterSection
+      'api::page.page': ApiPagePage
       'api::prompt.prompt': ApiPromptPrompt
+      'api::setting.setting': ApiSettingSetting
       'api::tag.tag': ApiTagTag
     }
   }
