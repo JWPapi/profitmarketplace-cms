@@ -63,7 +63,7 @@
       "type": "boolean"
     },
     "disclaimer": {
-      "type": "string"
+      "type": "text"
     }
   }
 }

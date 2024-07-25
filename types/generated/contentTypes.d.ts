@@ -763,7 +763,7 @@ export interface ApiIdentityIdentity extends Schema.SingleType {
     color: Attribute.String
     language: Attribute.String
     news_grabbing: Attribute.Boolean
-    disclaimer: Attribute.String
+    disclaimer: Attribute.Text
     createdAt: Attribute.DateTime
     updatedAt: Attribute.DateTime
     publishedAt: Attribute.DateTime
