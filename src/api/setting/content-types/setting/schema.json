@@ -15,6 +15,25 @@
     "display_authors": {
       "type": "boolean",
       "default": true
+    },
+    "show_infobar": {
+      "type": "boolean",
+      "default": true
+    },
+    "category_above_article": {
+      "type": "boolean",
+      "default": false
+    },
+    "show_breadcrumbs": {
+      "type": "boolean",
+      "default": false
+    },
+    "title_tailwind_class": {
+      "type": "string"
+    },
+    "published_on_below_image": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

@@ -887,6 +887,11 @@ export interface ApiSettingSetting extends Schema.SingleType {
   }
   attributes: {
     display_authors: Attribute.Boolean & Attribute.DefaultTo<true>
+    show_infobar: Attribute.Boolean & Attribute.DefaultTo<true>
+    category_above_article: Attribute.Boolean & Attribute.DefaultTo<false>
+    show_breadcrumbs: Attribute.Boolean & Attribute.DefaultTo<false>
+    title_tailwind_class: Attribute.String
+    published_on_below_image: Attribute.Boolean & Attribute.DefaultTo<false>
     createdAt: Attribute.DateTime
     updatedAt: Attribute.DateTime
     publishedAt: Attribute.DateTime
