@@ -57,6 +57,10 @@
     },
     "bulletPoints": {
       "type": "json"
+    },
+    "sponsored": {
+      "type": "boolean",
+      "default": false
     }
   }
 }
