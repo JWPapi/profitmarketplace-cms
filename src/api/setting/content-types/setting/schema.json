@@ -34,6 +34,10 @@
     "published_on_below_image": {
       "type": "boolean",
       "default": false
+    },
+    "logo_in_footer": {
+      "type": "boolean",
+      "default": true
     }
   }
 }
