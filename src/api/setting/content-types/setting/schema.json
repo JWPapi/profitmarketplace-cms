@@ -31,6 +31,10 @@
     "title_tailwind_class": {
       "type": "string"
     },
+    "heading_color_code": {
+      "type": "string",
+      "default": "#000000"
+    },
     "published_on_below_image": {
       "type": "boolean",
       "default": false

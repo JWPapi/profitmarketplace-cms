@@ -678,6 +678,7 @@ export interface ApiArticleArticle extends Schema.CollectionType {
     category: Attribute.Relation<'api::article.article', 'oneToOne', 'api::category.category'>
     description: Attribute.Text
     bulletPoints: Attribute.JSON
+    sponsored: Attribute.Boolean & Attribute.DefaultTo<false>
     createdAt: Attribute.DateTime
     updatedAt: Attribute.DateTime
     publishedAt: Attribute.DateTime
@@ -892,6 +893,7 @@ export interface ApiSettingSetting extends Schema.SingleType {
     show_breadcrumbs: Attribute.Boolean & Attribute.DefaultTo<false>
     title_tailwind_class: Attribute.String
     published_on_below_image: Attribute.Boolean & Attribute.DefaultTo<false>
+    logo_in_footer: Attribute.Boolean & Attribute.DefaultTo<true>
     createdAt: Attribute.DateTime
     updatedAt: Attribute.DateTime
     publishedAt: Attribute.DateTime
