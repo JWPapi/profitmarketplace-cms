@@ -892,6 +892,7 @@ export interface ApiSettingSetting extends Schema.SingleType {
     category_above_article: Attribute.Boolean & Attribute.DefaultTo<false>
     show_breadcrumbs: Attribute.Boolean & Attribute.DefaultTo<false>
     title_tailwind_class: Attribute.String
+    heading_color_code: Attribute.String & Attribute.DefaultTo<'#000000'>
     published_on_below_image: Attribute.Boolean & Attribute.DefaultTo<false>
     logo_in_footer: Attribute.Boolean & Attribute.DefaultTo<true>
     createdAt: Attribute.DateTime
