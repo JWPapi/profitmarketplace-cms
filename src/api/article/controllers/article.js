@@ -42,7 +42,7 @@ module.exports = createCoreController('api::article.article', ({ strapi }) => ({
       createdFiles = await strapi.plugins.upload.services.upload.upload({
         data: {
           fileInfo: {
-            name: articleData.title + '-cover',
+            name: articleData.slug + '-cover',
             caption: articleData.description,
             alternativeText: articleData.title + '-cover',
             publishedAt: new Date(),
