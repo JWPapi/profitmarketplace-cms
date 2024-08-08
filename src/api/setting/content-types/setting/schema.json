@@ -42,6 +42,10 @@
     "logo_in_footer": {
       "type": "boolean",
       "default": true
+    },
+    "pexels_grabbing": {
+      "type": "boolean",
+      "default": false
     }
   }
 }

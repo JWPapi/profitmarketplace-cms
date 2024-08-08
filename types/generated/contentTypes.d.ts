@@ -895,6 +895,7 @@ export interface ApiSettingSetting extends Schema.SingleType {
     heading_color_code: Attribute.String & Attribute.DefaultTo<'#000000'>
     published_on_below_image: Attribute.Boolean & Attribute.DefaultTo<false>
     logo_in_footer: Attribute.Boolean & Attribute.DefaultTo<true>
+    pexels_grabbing: Attribute.Boolean & Attribute.DefaultTo<false>
     createdAt: Attribute.DateTime
     updatedAt: Attribute.DateTime
     publishedAt: Attribute.DateTime
