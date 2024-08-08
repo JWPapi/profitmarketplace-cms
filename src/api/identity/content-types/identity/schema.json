@@ -64,6 +64,9 @@
     },
     "disclaimer": {
       "type": "text"
+    },
+    "description": {
+      "type": "text"
     }
   }
 }
